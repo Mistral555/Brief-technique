@@ -41,15 +41,15 @@ script/
    pip install -r script/requirements.txt
    ```
 
-2. **Exécuter le script** :
+2. **Exécuter le script (via Docker)** :
    ```bash
-   python script/script.py
+   dococker-compose up --build
    ```
 
-3. **(Optionnel) Utiliser Docker** :
+2. **Relancer le script avec d'autres modifications** :
    ```bash
-   docker build -t test-technique ./script
-   docker run --rm -v ${PWD}/data:/data test-technique
+   dococker-compose down -v
+   dococker-compose up --build
    ```
 
 ## Points à discuter
